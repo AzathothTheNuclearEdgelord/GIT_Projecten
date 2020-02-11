@@ -16,7 +16,13 @@ namespace Hangman
     {
         static void Main(string[] args)
         {
+            void Continue()
+            {
+                Console.WriteLine("\nPress [ENTER] to continue.");
+                Console.ReadLine();
+            }
             
+            Continue();
         }
     }
 }
