@@ -16,8 +16,33 @@ namespace Even_Odd
     {
         static void Main(string[] args)
         {
-            //I'll be attempting to do this portion of the project.
+            int userNumber;
+            string userInput;
             
+            //Habitual continue function
+            void Continue()
+            {
+                Console.WriteLine("\nPress [ENTER] to continue.");
+                Console.ReadLine();
+            }
+
+            Console.WriteLine("Please enter a number to see if it's even or odd.");
+            
+            do
+            {
+                userInput = Console.ReadLine();
+            } while (!int.TryParse(userInput, out userNumber));
+
+            if (userNumber % 2 == 0)
+            {
+                Console.WriteLine("\nYour number, {0} is an even number", userNumber);
+            }
+            else
+            {
+                Console.WriteLine("\nYour number, {0} is an odd number", userNumber);
+            }
+            
+            Continue();
         }
     }
 }
