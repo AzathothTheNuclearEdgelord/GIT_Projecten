@@ -22,7 +22,7 @@ namespace BinaryConverter
             float binaryNumber = 128;
 
             Console.WriteLine("Welcome to the converter.");
-            Console.WriteLine("In here you convert a decimal to binary and also the other way around.");
+            Console.WriteLine("In here you convert a decimal to binary and also the other way around. it is converted to 8 bit");
             Console.ReadLine();
             Console.WriteLine("press 1: decimal -> binary. press 2: binary -> decimal");
 
@@ -38,6 +38,10 @@ namespace BinaryConverter
                 DecimalToBinary();
             }
 
+            if (inputNumber == 2)
+            {
+                BinaryToDecimal();
+            }
 
             void DecimalToBinary()
             {
@@ -63,6 +67,21 @@ namespace BinaryConverter
                         Console.WriteLine("0");
                     }
                 }
+            }
+
+            void BinaryToDecimal()
+            {
+                float total;
+
+                for (int i = 0; i < 8; i++)
+                {
+                    do
+                    {
+                        Console.WriteLine("Choose a 1 or a 0 to convert");
+                        inputUser = Console.ReadLine();
+                    } while (!float.TryParse(inputUser, out inputNumber) || inputNumber > 1 || inputNumber < 0);
+                }
+                
             }
 
             Console.ReadLine();
