@@ -16,6 +16,8 @@ namespace Even_Odd
     {
         static void Main(string[] args)
         {
+            //I'll be attempting to do this portion of the project.
+            
         }
     }
 }
