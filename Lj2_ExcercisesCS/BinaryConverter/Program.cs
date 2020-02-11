@@ -16,6 +16,56 @@ namespace BinaryConverter
     {
         static void Main(string[] args)
         {
+            string inputUser;
+
+            float inputNumber = 0;
+            float binaryNumber = 128;
+
+            Console.WriteLine("Welcome to the converter.");
+            Console.WriteLine("In here you convert a decimal to binary and also the other way around.");
+            Console.ReadLine();
+            Console.WriteLine("press 1: decimal -> binary. press 2: binary -> decimal");
+
+            do
+            {
+                inputUser = Console.ReadLine();
+            } while (!float.TryParse(inputUser, out inputNumber) || inputNumber > 2 || inputNumber < 1);
+
+            Console.WriteLine();
+
+            if (inputNumber == 1)
+            {
+                DecimalToBinary();
+            }
+
+
+            void DecimalToBinary()
+            {
+                do
+                {
+                    Console.WriteLine("Choose a number to convert between 1 and 256");
+                    inputUser = Console.ReadLine();
+                } while (!float.TryParse(inputUser, out inputNumber) || inputNumber > 256 || inputNumber < 1);
+
+                while (binaryNumber >= 1)
+                {
+                    if (inputNumber >= binaryNumber)
+                    {
+                        //Console.WriteLine(binairGetallen);
+                        inputNumber = inputNumber - binaryNumber;
+                        binaryNumber = binaryNumber * 0.5f;
+                        Console.WriteLine("1");
+                    }
+                    else
+                    {
+                        //Console.WriteLine(binairGetallen);
+                        binaryNumber = binaryNumber * 0.5f;
+                        Console.WriteLine("0");
+                    }
+                }
+            }
+
+            Console.ReadLine();
         }
     }
 }
