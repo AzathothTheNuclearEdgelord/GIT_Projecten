@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,6 +28,9 @@ namespace RockPaperScissors
 
             //user input
             string userInput;
+
+            //AI input
+            string inputAI;
           
             //choice player
             int choice;
@@ -49,7 +51,7 @@ namespace RockPaperScissors
                 Console.WriteLine("Player, type your choice: Rock - Paper - Scissors");
                 userInput = Console.ReadLine();
                 Console.WriteLine();
-                if()
+                if(Array.Find(rockPaperScissors, rps => rps.ToLower() == userInput.ToLower()) != null)
                 {
                     resume = true;
                 }
@@ -57,12 +59,26 @@ namespace RockPaperScissors
                 {
                     resume = false;
                 }
-            } while (resume = true);
+            } while (!resume);
 
-           
-
-            
-
+            Console.WriteLine("You chose {0}.", userInput);
+            choiceAI = rndm.Next(1, 4);
+            inputAI = rockPaperScissors[choiceAI];
+            Console.WriteLine("AI chose {0}.", inputAI);
+            Console.ReadLine();
+            if(userInput == rockPaperScissors[0] && inputAI == rockPaperScissors[0]) if (userInput == rockPaperScissors[1] && inputAI == rockPaperScissors[1]) if (userInput == rockPaperScissors[2] && inputAI == rockPaperScissors[2])
+            {
+                Console.WriteLine("Nobody wins.");
+            }
+            if (userInput == rockPaperScissors[0] && inputAI == rockPaperScissors[1]) if (userInput == rockPaperScissors[1] && inputAI == rockPaperScissors[2]) if (userInput == rockPaperScissors[2] && inputAI == rockPaperScissors[0])
+            {
+                Console.WriteLine("The player wins.");
+            }
+            if (userInput == rockPaperScissors[0] && inputAI == rockPaperScissors[2]) if (userInput == rockPaperScissors[1] && inputAI == rockPaperScissors[0]) if (userInput == rockPaperScissors[2] && inputAI == rockPaperScissors[1])
+            {
+                Console.WriteLine("The computer wins.");
+            }
+            Console.ReadLine();
         }
     }
 }
