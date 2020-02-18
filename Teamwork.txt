@@ -1,5 +1,13 @@
 Communicatie: praten onder elkaar. 
 commit messages: begin met een samenvatting. en daarna uitleg wat je hebt verandert.
+	bijv :
+	// Als title/eerste regel van het het commit message
+	Added shooting mechanics
+	// Als inhoud van de rest van de de message
+	- Added base damage value
+	- Added projectile speed
+	- Set accuracy to 75%
+
 verantwoordlijk voor code: ivo.
 verantwoordelijk repository: martijn.
 branching: ieder een apparte branch.
