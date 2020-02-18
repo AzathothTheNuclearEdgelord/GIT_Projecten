@@ -49,7 +49,7 @@ namespace RockPaperScissors
                 Console.WriteLine("Player, type your choice: Rock - Paper - Scissors");
                 userInput = Console.ReadLine();
                 Console.WriteLine();
-                if(userInput != "Rock")
+                if()
                 {
                     resume = true;
                 }
