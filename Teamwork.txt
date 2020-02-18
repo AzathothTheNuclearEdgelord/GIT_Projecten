@@ -1,0 +1,9 @@
+Communicatie: praten onder elkaar. 
+commit messages: begin met een samenvatting. en daarna uitleg wat je hebt verandert.
+verantwoordlijk voor code: ivo.
+verantwoordelijk repository: martijn.
+branching: ieder een apparte branch.
+conventies naamgeving van branch: PascalCase, project naam.
+conventies in code: camelCase var. methods PascalCase.
+Comments afspraken: engels. kort en duidelijk.
+branch solutions.
