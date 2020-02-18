@@ -1,5 +1,5 @@
 Communicatie: praten onder elkaar. 
-commit messages: begin met de opdracht naam. en schrijf daarna op wat je hebt verandert. verledetijd. 
+commit messages: begin met een samenvatting. en daarna uitleg wat je hebt verandert.
 verantwoordlijk voor code: ivo.
 verantwoordelijk repository: martijn.
 branching: ieder een apparte branch.
